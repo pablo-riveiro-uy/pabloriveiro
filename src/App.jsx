@@ -80,8 +80,9 @@ function App() {
      
           </div>
           <div className='text-m mt-6 text-justify'>
-
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet adipisci voluptas cupiditate quod unde deserunt sint delectus laboriosam atque qui repellendus reprehenderit deleniti sit cumque quos, similique dolorum blanditiis ut! Vero eligendi modi ad deleniti maiores non alias tempora suscipit, consequuntur fugit similique numquam a pariatur inventore nihil, quis optio saepe ipsum hic error asperiores. Eum sequi aliquid dicta temporibus non impedit ducimus laudantium omnis rerum eos hic, facilis maxime quod!!</p>
+            <p>Si, orgullosamente soy Nerd ochentoso, amo la tecnología pero crecí jugando a la bolita, desde niño la ciencia ficción me hizo buscar siempre más allá.
+               Soy Licenciado en Ciencias de la Comunicación, Uruguayo, hice StandUp Comedy, como productor audiovisual trabajé en los principales canales de TV en entretenimiento, noticieros y hasta documetnal
+               Ahora hace años aprendo desarrollo web para volcar mi experiencia de trabajo en equipo, creatividad a través de las IT's </p>
           </div>
         </section>
         <section id='comunicacion' className='flex flex-col bg-white text-warhol-ink w-full px-20 place-items-center py-24 mb-12'>
@@ -91,7 +92,7 @@ function App() {
               </div>
           <div className='text-m mt-6 text-justify'>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet adipisci voluptas cupiditate quod unde deserunt sint delectus laboriosam atque qui repellendus reprehenderit deleniti sit cumque quos, similique dolorum blanditiis ut! Vero eligendi modi ad deleniti maiores non alias tempora suscipit, consequuntur fugit similique numquam a pariatur inventore nihil, quis optio saepe ipsum hic error asperiores. Eum sequi aliquid dicta temporibus non impedit ducimus laudantium omnis rerum eos hic, facilis maxime quod!!</p>
+            <p>Mi camino comenzó haciendo radio en mi barrio, estudié comunciación y pronto me enamoré de la imagen, trabajé como camarógrafo y editor para formatos de entretenimiento, humor, noticiero y hasta documental ya sea en canal !0, canal 4, canal 5 y una lista larga de emprendedores, empresas y artistas con los que aprendí 15 años a refinar lenguajes, transmitir ideas, dirigirse a públicos y sobre todo, en tiempo y forma</p>
           </div>
         </section>
         <section id='desarrollo' className='flex flex-col bg-white text-warhol-ink w-full px-20 place-items-center py-24 mb-12'>
@@ -102,7 +103,7 @@ function App() {
           </div>
           <div className='text-m mt-6 text-justify'>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet adipisci voluptas cupiditate quod unde deserunt sint delectus laboriosam atque qui repellendus reprehenderit deleniti sit cumque quos, similique dolorum blanditiis ut! Vero eligendi modi ad deleniti maiores non alias tempora suscipit, consequuntur fugit similique numquam a pariatur inventore nihil, quis optio saepe ipsum hic error asperiores. Eum sequi aliquid dicta temporibus non impedit ducimus laudantium omnis rerum eos hic, facilis maxime quod!!</p>
+            <p>Le diseñé y publiqué una página web a un proyecto en el 2005, cuando aún no sabía nada de Desarrollo Web, porque sentía que tenía que tener una página web, para entonces la computadora siempre fue mi socia número uno a la hora de crear, ya fuera para editar sonido, escribir guiones o jugar a programar, desde mi primera tk-95 de 48 k de memoria. Estudié en Holberton School para tener una buena base de pensamiento computacional y aprendí a lo largo de varias academias distintas tecnologías que hoy me colocan más del lado del FullStack</p>
           </div>
         </section>
         <section id='creatividad' className='flex flex-col bg-white text-warhol-ink w-full px-20 place-items-center py-24  mb-12'>
@@ -115,7 +116,7 @@ function App() {
           </div>
           <div className='text-m mt-6 text-justify'>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet adipisci voluptas cupiditate quod unde deserunt sint delectus laboriosam atque qui repellendus reprehenderit deleniti sit cumque quos, similique dolorum blanditiis ut! Vero eligendi modi ad deleniti maiores non alias tempora suscipit, consequuntur fugit similique numquam a pariatur inventore nihil, quis optio saepe ipsum hic error asperiores. Eum sequi aliquid dicta temporibus non impedit ducimus laudantium omnis rerum eos hic, facilis maxime quod!!</p>
+            <p>Siempre tengo que abrir la boca, si ya alguien lo hizo, se me ocurre que siempre puede ser distinto, me gusta que cada cosa tenga su personalidad, así que me es inavitable intentar crear, en el acierto o en el error, creo que es un gran hábito, y saber cuando no re invettar la rueda, también es clave, pero si se puede, se debe crear.</p>
           </div>
         </section>
         <section id='humor' className='flex flex-col bg-white text-warhol-ink w-full px-20 place-items-center py-24  mb-12'>
@@ -125,8 +126,7 @@ function App() {
 
           </div>
           <div className='text-m mt-6 text-justify'>
-
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum eveniet adipisci voluptas cupiditate quod unde deserunt sint delectus laboriosam atque qui repellendus reprehenderit deleniti sit cumque quos, similique dolorum blanditiis ut! Vero eligendi modi ad deleniti maiores non alias tempora suscipit, consequuntur fugit similique numquam a pariatur inventore nihil, quis optio saepe ipsum hic error asperiores. Eum sequi aliquid dicta temporibus non impedit ducimus laudantium omnis rerum eos hic, facilis maxime quod!!</p>
+            <p>De los tres chiflados a Tiranos temblad, del agente Maxwll Smart, la Pantera Rosa, Monty Python, a los clásicos Uruguayos como Decalegrón, Telecataplun o los eternos Benny Hill, Chespirito, Mr Bean o lesluthiers, el humor ha marcado cada día de mi vida, admiré a estos genios del ingenio tanto, que muchas veces intenté trabajar junto a los que a pesar de los pesares, elegían hacer humor. Parece chiste, pero yo mismo me subí al escenario a tomarme el humor en serio </p>
           </div>
         </section>
 
