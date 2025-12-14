@@ -1,36 +1,85 @@
 // tailwind.config.js
 export default {
-  content: ['./index.html','./src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: ['class'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './registry/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
         warhol: {
-          banana: '#FFE800',     // amarillo vibrante
-          rojo: '#FF3B3F',     // rojo intenso
-          cyan: '#00FFFF',   // cian eléctrico
-          violeta: '#8E44AD',      // violeta saturado
-          verde: 'rgba(74,248,5,0.42)',       // verde menta
-          ink: '#1A1A1A',        // negro profundo
-          pink: '#F020C6',  // rosa chicle
+          banana: '#FFE800',
+          rojo: '#FF3B3F',
+          cyan: '#00FFFF',
+          violeta: '#8E44AD',
+          verde: 'rgba(74,248,5,0.42)',
+          ink: '#1A1A1A',
+          pink: '#F020C6',
         },
-         keyframes: {
-    fadeIn: {
-      '0%': { opacity: '0' },
-      '100%': { opacity: '1' },
-    },
-    slideUp: {
-      '0%': { transform: 'translateY(20px)', opacity: '0' },
-      '100%': { transform: 'translateY(0)', opacity: '1' },
-    },
-  },
-  animation: {
-    fadeIn: 'fadeIn 1s ease-out',
-    slideUp: 'slideUp 0.8s ease-out',
-  },
-
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        chart: {
+          '1': 'hsl(var(--chart-1))',
+          '2': 'hsl(var(--chart-2))',
+          '3': 'hsl(var(--chart-3))',
+          '4': 'hsl(var(--chart-4))',
+          '5': 'hsl(var(--chart-5))',
+        },
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-out',
+        slideUp: 'slideUp 0.8s ease-out',
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
     },
   },
-
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 }
