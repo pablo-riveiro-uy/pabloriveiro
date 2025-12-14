@@ -1,18 +1,37 @@
 {
   "acercademi": [
+    { "img": "_PT52487.jpg" },
+    { "img": "DOS_0139.jpg" },
+    { "img": "DSC_6132.jpg" },
+    { "img": "HOL_0385.jpg" },
+    { "img": "filmaker.jpg" },
+    { "img": "fotografo.jpg" },
+    { "img": "producto.jpg" },
+    { "img": "tvman.jpg" },
+    { "img": "standup.jpg" }
+  ],
+  "desarrollo": [
     {
-      "img": "filmaker.jpg"
+      "images": ["log-incartofix.png","dashboard-cartofix.png"],
+      "title": "CarToFix",
+      "description": "Un sistema de gestión para talleres mecánicos que permite llevar el control de clientes, vehículos, órdenes de trabajo y facturación de manera eficiente y sencilla.",
+      "technologies": ["React", "Tailwind CSS", "Flusk", "SQLite"],
+      "link": "https://ejemplo.com/proyecto1"
     },
     {
-      "img": "fotografo.jpg"
+      "images": ["Importación.png","cargas-megaship.png"],
+      "title": "MegaShip",
+      "description": "Una plataforma integral para la gestión de importaciones y logística, facilitando la manera de presupuestar envíos internacionales para empresas de todos los tamaños.",
+      "technologies": ["React", "Styled Components", "NodeJS", "MongoDB"],
+      "link": "https://ejemplo.com/proyecto1"
     },
     {
-      "img": "producto.jpg"
-    },
-    {
-      "img": "tvman.jpg"
+      "images": ["dashboard-faro-latino.JPG","form-faro.jpeg"],
+      "title": "Faro Latino",
+      "description": "Colaboración en la incorporación de nuevas funcionalidades y mejoras en la experiencia de usuario de la plataforma educativa Faro Latino, utilizada por miles de artistas en América Latina. Construcción de formularios dinámicos y reportes personalizados desde su estructura en backend utilizando Django hasta su presentación en frontend.",
+      "technologies": ["React", "Django", "PostrgeSQL"],
+      "link": "https://ejemplo.com/proyecto1"
     }
-    
   ],
   "comunicacion": [
     {
@@ -23,22 +42,22 @@
     {
       "img": "canal10.jpg",
       "title": "Canal 10 Saeta",
-      "text": "Siendo parte de la gran familia de canal 10 no solo tuve la oportunidad de ganar el concurso conta de talentos del año 2005 que me abrió las puertas a trabajar con grandes profesionales como realizador de contendiso en importantes programas como Yo y tres más y 1000 razones para reir donde además participé como personaje humorístico junto a Robert Moré."
+      "text": "Siendo parte de la gran familia de Canal 10 no solo tuve la oportunidad de ganar el concurso de talentos del año 2005 que me abrió las puertas a trabajar con grandes profesionales como realizador de contenidos en importantes programas como Yo y tres más y 1000 razones para reír donde además participé como personaje humorístico junto a Robert Moré."
     },
     {
       "img": "delivery.jpg",
       "title": "Delivery Solidario",
-      "text": "Un capítulo especial en mi carrera fue la producción del programa Delivery Solidario, un espacio que logró brindar ayuda a cientos de uruguayos por medio de la solidiaridad de empresas y particulares que demandaba un gran trabajo de coordinación y logística pero que valió la pena cada emisón, uno de esos proyectos que te llenan el alma compartido con un gran equipo y toda la calidez de Iñaki Abadí"
+      "text": "Un capítulo especial en mi carrera fue la producción del programa Delivery Solidario, un espacio que logró brindar ayuda a cientos de uruguayos por medio de la solidaridad de empresas y particulares que demandaba un gran trabajo de coordinación y logística pero que valió la pena cada emisión, uno de esos proyectos que te llenan el alma compartido con un gran equipo y toda la calidez de Iñaki Abadí."
     },
     {
       "img": "produccion.jpg",
       "title": "La producción audiovisual",
-      "text": "Hoy detrás de cámara, mañana detrás, pero siempre rodeado de artistas, momentos y la posibilidad de contar la historia en primra persona. Este trabajo te da la posibilidad de entrar a los más grandes eventos, conocer grandes personalidades y participar de proyectos gigantes, aquií en la foto tuve la posibilidad de vivir la gran inaguración del estadio Campeón del Siglo de Peñarol."
+      "text": "Hoy detrás de cámara, mañana delante, pero siempre rodeado de artistas, momentos y la posibilidad de contar la historia en primera persona. Este trabajo te da la posibilidad de entrar a los más grandes eventos, conocer grandes personalidades y participar de proyectos gigantes. Aquí en la foto tuve la posibilidad de vivir la gran inauguración del estadio Campeón del Siglo de Peñarol."
     },
     {
       "img": "freelance.jpg",
       "title": "Freelance",
-      "text": "Poco después de recibirme cono Licenciado en Ciencias de la Comunicación busqé vincularme a a todo lo vinvulara una cámara y un ahistoria, así fue que tuve la posibilidad de ganar el concurso Video Relámpago de Cinemateca uruguaya del año 2004 con un corto hecho entre amigos, desde entonces siempre estoy trabajando como camarógrafo, editor, productor o guionista, como cuando produje Paseo Amarillo, una propuesta para niños que se emitió por cnala 5 https://www.youtube.com/watch?v=SU1y6e_dSj0"
+      "text": "Poco después de recibirme como Licenciado en Ciencias de la Comunicación busqué vincularme a todo lo que involucrara una cámara y una historia. Así fue que tuve la posibilidad de ganar el concurso Video Relámpago de Cinemateca uruguaya del año 2004 con un corto hecho entre amigos. Desde entonces siempre estoy trabajando como camarógrafo, editor, productor o guionista, como cuando produje Paseo Amarillo, una propuesta para niños que se emitió por Canal 5 https://www.youtube.com/watch?v=SU1y6e_dSj0"
     }
   ]
 }
