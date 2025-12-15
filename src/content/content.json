@@ -14,23 +14,38 @@
     {
       "images": ["log-incartofix.png","dashboard-cartofix.png"],
       "title": "CarToFix",
-      "description": "Un sistema de gestión para talleres mecánicos que permite llevar el control de clientes, vehículos, órdenes de trabajo y facturación de manera eficiente y sencilla.",
-      "technologies": ["React", "Tailwind CSS", "Flusk", "SQLite"],
-      "link": "https://ejemplo.com/proyecto1"
+      "description": "Un sistema de gestión para talleres mecánicos que permite llevar el control de clientes, vehículos, órdenes de trabajo y facturación de manera eficiente y sencilla. Formé parte del grupo de producto, diseñamos en Figma para obetener el diseño principal y construirlo en React, también programé el presupustador de la herramienta",
+      "technologies": ["React", "Tailwind CSS", "FastAPI", "Firebase"],
+      "link": "https://github.com/Diego-Bonora/holbertonschool-CarToFix"
     },
     {
       "images": ["Importación.png","cargas-megaship.png"],
       "title": "MegaShip",
-      "description": "Una plataforma integral para la gestión de importaciones y logística, facilitando la manera de presupuestar envíos internacionales para empresas de todos los tamaños.",
-      "technologies": ["React", "Styled Components", "NodeJS", "MongoDB"],
-      "link": "https://ejemplo.com/proyecto1"
+      "description": "Una plataforma integral para la gestión de importaciones y logística, facilitando la manera de presupuestar envíos internacionales para empresas de todos los tamaños. Colaboré en la creación del producto y su experiencia de usuario",
+      "technologies": ["React", "Styled Components", "NodeJS", "Zustand", "Supabase"],
+      "link": "https://megaship.netlify.app/"
     },
     {
       "images": ["dashboard-faro-latino.JPG","form-faro.jpeg"],
       "title": "Faro Latino",
-      "description": "Colaboración en la incorporación de nuevas funcionalidades y mejoras en la experiencia de usuario de la plataforma educativa Faro Latino, utilizada por miles de artistas en América Latina. Construcción de formularios dinámicos y reportes personalizados desde su estructura en backend utilizando Django hasta su presentación en frontend.",
+      "description": "Colaboración en la incorporación de nuevas funcionalidades y mejoras en la experiencia de usuario de la plataforma de administración de suscripciones a plataformas musicales Faro Latino. Colaboré realizando cambios en formularios dinámicos y reportes personalizados desde su estructura en backend utilizando Django hasta su presentación en frontend.",
       "technologies": ["React", "Django", "PostrgeSQL"],
-      "link": "https://ejemplo.com/proyecto1"
+      "link": "https://github.com/javieryoung/farolatino"
+    },
+    {
+      "images": ["ceratwit.jpg","ceratwit-mensaje.jpg"],
+      "title": "CeraTwit",
+      "description": "Idea para recibir la participación del público en un evento dedicado a los 10 años de la desaparición física de Gustavo Cerati. Propuse un formulario al que se accedía pro código QR donde las personas aportaban mensajes, un sistema de manager para que la producción autorizara los mensajes y una página que reproducía los mensajes para ser proyectada en pantalla gigante, un aporte creativo que contruí en unos pocos días usando react para el front y Firebase para almacenar los mensajes.",
+      "technologies": ["React", "Animate CSS", "Firebase", "Netlify"],
+      "link": "https://ceratwit.netlify.app/ceratwits"
+    
+    },
+    {
+      "images": ["interpaul.jpg","interpaul-2.jpg"],
+      "title": "Interpaul",
+      "description": "Re imaginación del sitio web de interpol utilizando la API pública de la organización para mostrar información actualizada sobre personas buscadas internacionalmente. Observando que el sitio original tenía un estilo sobrio y poco moderno, propuse a manera de ejercicio un estilo basado en lo que solemos ver más a menudo en películas con fondos cyberneticos, tipografías digitales y sonidos computarizados, proyecto para divertirse y homeenagear las pelícus de espías que veíamos en los 80s.",
+      "technologies": ["React", "ACSS", "Interpol public API"],
+      "link": "https://interpaul.netlify.app/"
     }
   ],
   "comunicacion": [
