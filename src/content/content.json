@@ -41,6 +41,14 @@
     
     },
     {
+      "images": ["noja1.jpg","noja2.jpg"],
+      "title": "Noja",
+      "description": "Proyecto en construcción. Colaboración en Sitio de información financiera que recoge información de Api y genera sugerencias de inversión basadas en análisis técnico. Colaboré en el armado del sistema en Django y PostrgeSQL y en el montaje de la aplicación en AWS.",
+      "technologies": ["React", "Django", "PostrgeSQL", "AWS", "EC2", "SES"],
+      "link": "https://noja.young.uy"
+    
+    },
+    {
       "images": ["interpaul.jpg","interpaul-2.jpg"],
       "title": "Interpaul",
       "description": "Re imaginación del sitio web de interpol utilizando la API pública de la organización para mostrar información actualizada sobre personas buscadas internacionalmente. Observando que el sitio original tenía un estilo sobrio y poco moderno, propuse a manera de ejercicio un estilo basado en lo que solemos ver más a menudo en películas con fondos cyberneticos, tipografías digitales y sonidos computarizados, proyecto para divertirse y homeenagear las pelícus de espías que veíamos en los 80s.",
