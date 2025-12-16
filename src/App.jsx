@@ -1,10 +1,11 @@
 import './App.css'
 import foto_perfil from "/assets/foto-perfil-pablo.webp"
+import logo_github from "/assets/github-mark-white.png"
 import { WordRotate } from "@/components/ui/word-rotate"
 import data from "./content/content.json";
 import { AnimatePresence, motion } from "framer-motion";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   const acercademi_content = data.acercademi;
   const desarrollo_content = data.desarrollo;
   const creatividad_content = data.creatividad;
+  const humor_content = data.humor;
 
   {/* Slider Acerca de mi */ }
 
@@ -29,13 +31,27 @@ function App() {
   const prevSlide = () => set_d_Index((prev) => (prev - 1 + desarrollo_content.length) % desarrollo_content.length)
 
   const d_item = desarrollo_content[d_index];
-  
-    {/* Sliderfotos creatividad */ }
 
-    const [c_index, c_setIndex] = useState(0);
+
+  {/* Sliderfotos creatividad */ }
+
+  const [c_index, c_setIndex] = useState(0);
 
   const c_next = () => c_setIndex((prev) => (prev + 1) % creatividad_content.length);
   const c_prev = () => c_setIndex((prev) => (prev - 1 + creatividad_content.length) % creatividad_content.length);
+
+  {/* Sliderfotos creatividad */ }
+  const [h_index, h_setIndex] = useState(0);
+
+  // ⏱ cada 3 segundos cambia la imagen
+  useEffect(() => {
+    const interval = setInterval(() => {
+      h_setIndex((prev) => (prev + 1) % humor_content.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+
 
   return (
     <>
@@ -64,19 +80,51 @@ function App() {
         </div>
 
         {/* Sección central: título */}
-        <div className='text-left'>
+        <div className="text-left">
           <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-            Pablo Riverio
+            Pablo Riveiro
           </h1>
-          <WordRotate className="text-3xl font-bold text-white dark:text-white" words={["Comunicación", "Desarrollo Web", "Creatividad"]} />
 
-          <div className='flex flex-row place-items-center'>
-            <motion.div className="w-6 h-6 bg-warhol-violeta mr-6" animate={{ rotate: 180 }}
-              transition={{ duration: 0.5 }} />
-            <motion.a href="#acercaDeMi" whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.8 }}>
-              <h3 className='text-2xl font-bold leading-tight'>Acerca de mi</h3>
-            </motion.a>
+          <WordRotate
+            className="text-3xl font-bold text-white dark:text-white"
+            words={["Comunicación", "Desarrollo Web", "Creatividad"]}
+          />
+
+          <div className="flex flex-row mt-12 items-center space-x-8">
+            {/* Acerca de mí */}
+            <div className="flex flex-row items-center space-x-3">
+              <motion.div
+                className="w-6 h-6 bg-warhol-violeta"
+                animate={{ rotate: 180 }}
+                transition={{ duration: 0.5 }}
+              />
+              <motion.a
+                href="#acercaDeMi"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-2xl font-bold leading-tight"
+              >
+                Acerca de mí
+              </motion.a>
+            </div>
+
+            {/* Bajar CV */}
+            <div className="flex flex-row items-center space-x-3">
+              <motion.div
+                className="w-6 h-6 bg-warhol-cyan"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
+              />
+              <motion.a
+                href="assets/Pablo Riveiro DEV CV202.pdf"
+                download
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-2xl font-bold leading-tight hover:text-warhol-electric"
+              >
+                Bajar CV
+              </motion.a>
+            </div>
           </div>
         </div>
 
@@ -94,7 +142,7 @@ function App() {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
             >Comunicación</motion.a>
-            <motion.div className="w-10 h-10 bg-black" initial={{ opacity: 0, scale: 0 }}
+            <motion.div className="w-10 h-10 bg-black ml-4" initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 0.8,
@@ -106,7 +154,7 @@ function App() {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
             >Desarrollo Web</motion.a>
-            <motion.div className="w-10 h-10 bg-warhol-cyan" initial={{ opacity: 0, scale: 0 }}
+            <motion.div className="w-10 h-10 bg-warhol-cyan ml-4" initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 0.8,
@@ -119,7 +167,7 @@ function App() {
               whileTap={{ scale: 0.8 }}
 
             >Creatividad</motion.a>
-            <motion.div className="w-10 h-10 bg-warhol-banana" initial={{ opacity: 0, scale: 0 }}
+            <motion.div className="w-10 h-10 bg-warhol-banana ml-4" initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 0.8,
@@ -132,7 +180,7 @@ function App() {
               whileTap={{ scale: 0.8 }}
 
             >Humor</motion.a>
-            <motion.div className="w-10 h-10 bg-warhol-pink" initial={{ opacity: 0, scale: 0 }}
+            <motion.div className="w-10 h-10 bg-warhol-pink ml-4" initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 0.8,
@@ -232,7 +280,7 @@ function App() {
             <p>Le diseñé y publiqué una página web a un proyecto en el 2005, cuando aún no sabía nada de Desarrollo Web, porque sentía que tenía que tener una página web, para entonces la computadora siempre fue mi socia número uno a la hora de crear, ya fuera para editar sonido, escribir guiones o jugar a programar, desde mi primera tk-95 de 48 k de memoria. Estudié en Holberton School para tener una buena base de pensamiento computacional y aprendí a lo largo de varias academias distintas tecnologías que hoy me colocan más del lado del FullStack</p>
           </div>
           {/* Botones arriba */}
-          <div className="mt-6 mb-6 flex justify-between w-full">
+          <div className="mt-6 mb-1 flex justify-between w-full">
             <button
               onClick={prevSlide}
               className="bg-white rounded-full shadow px-3 py-1"
@@ -294,6 +342,18 @@ function App() {
               </a>
             </div>
           </div>
+          <div className="mt-6 flex flex-row items-center">
+            <img src={logo_github} alt="GitHub logo" className="w-8 h-8 mr-5" />
+            <p className='text-white text-2xl font-bold'>Visita mi</p>
+            <a
+              href="https://github.com/pablo-riveiro-uy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 text-2xl font-bold leading-tight text-white hover:underline"
+            >
+              GitHub
+            </a>
+          </div>
         </motion.section>
         {/* Seccion Comunicación  */}
         <motion.section
@@ -341,14 +401,19 @@ function App() {
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <img
-                  src={`./assets/comunicacion/${item.img}`} alt={item.title}
+                  src={`/assets/comunicacion/${item.img}`} alt={item.title}
                   className="w-full h-40 object-cover"
                 />
                 <div className="p-4">
                   <h4 className="text-lg font-bold mb-2">{item.title}</h4>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-700 mb-2">
                     {item.text}
                   </p>
+                </div>
+                <div className='m-6'>
+                  {item.url ?
+                    <a className='text-black mb-2' target='_blank' href={item.url}>VER</a> : null
+                  }
                 </div>
               </motion.div>
             ))}
@@ -377,42 +442,42 @@ function App() {
 
             <p>Siempre tengo que abrir la boca, si ya alguien lo hizo, se me ocurre que siempre puede ser distinto, me gusta que cada cosa tenga su personalidad, así que me es inavitable intentar crear, en el acierto o en el error, creo que es un gran hábito, y saber cuando no re invettar la rueda, también es clave, pero si se puede, se debe crear.</p>
             <p>Así es que me meto en líos, trabajar en la tele, convertirme en desarrollador, conducir un evento de kinck boxing, crear un programa para niños original llevándolos de paseo en coordianción con el ministerio de educación, convertirme en personaje en un streaming de humor, o simplemenete aportar la idea distinta en el proyecto más común... no es un mérito, mucho no me sale ser normal. </p>
-             <div className="overflow-hidden w-full">
-            <motion.section className="relative overflow-hidden w-full py-12">
-              <div className="relative w-full flex justify-center items-center">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={c_index}
-                    className="min-w-[300px] bg-gray-100 rounded-lg shadow-md overflow-hidden flex flex-col"
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                  >
-                    <img
-                      src={`/assets/creatividad/${creatividad_content[c_index].img}`}
-                      alt={creatividad_content[c_index].img}
-                      className="w-full h-80 object-cover"
-                    />
-                  <p className='text-black text-center'>{creatividad_content[c_index].title}</p>
-                  </motion.div>
-                </AnimatePresence>
+            <div className="overflow-hidden w-full">
+              <motion.section className="relative overflow-hidden w-full py-12">
+                <div className="relative w-full flex justify-center items-center">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={c_index}
+                      className="min-w-[300px] bg-gray-100 rounded-lg shadow-md overflow-hidden flex flex-col"
+                      initial={{ opacity: 0, x: 100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -100 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
+                      <img
+                        src={`/assets/creatividad/${creatividad_content[c_index].img}`}
+                        alt={creatividad_content[c_index].img}
+                        className="w-full h-80 object-cover"
+                      />
+                      <p className='text-black text-center'>{creatividad_content[c_index].title}</p>
+                    </motion.div>
+                  </AnimatePresence>
 
-                {/* Botones de navegación */}
-                <button
-                  onClick={c_prev}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow px-3 py-1 text-black"
-                >
-                  ◀
-                </button>
-                <button
-                  onClick={c_next}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow px-3 py-1 text-black"
-                >
-                  ▶
-                </button>
-              </div>
-            </motion.section>
+                  {/* Botones de navegación */}
+                  <button
+                    onClick={c_prev}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow px-3 py-1 text-black"
+                  >
+                    ◀
+                  </button>
+                  <button
+                    onClick={c_next}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow px-3 py-1 text-black"
+                  >
+                    ▶
+                  </button>
+                </div>
+              </motion.section>
             </div>
           </div>
 
@@ -434,16 +499,28 @@ function App() {
           <div className='text-lg mt-6 text-justify text-white'>
             <p>De los tres chiflados a Tiranos temblad, del agente Maxwll Smart, la Pantera Rosa, Monty Python, a los clásicos Uruguayos como Decalegrón, Telecataplun o los eternos Benny Hill, Chespirito, Mr Bean o lesluthiers, el humor ha marcado cada día de mi vida, admiré a estos genios del ingenio tanto, que muchas veces intenté trabajar junto a los que a pesar de los pesares, elegían hacer humor. Parece chiste, pero yo mismo me subí al escenario a tomarme el humor en serio </p>
           </div>
-
-
+          <div className="relative w-full h-80 md:h-svh overflow-hidden rounded-lg shadow-lg mt-12 align-middle">
+            <AnimatePresence>
+              <motion.img
+                key={h_index}
+                src={`/assets/humor/${humor_content[h_index].img}`}
+                alt={`slide-${h_index}`}
+                className="absolute w-full h-full md:h-auto object-contain bg-black/1"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+              />
+            </AnimatePresence>
+          </div>
         </motion.section>
 
       </main >
       <footer>
-
+        <div className="w-full bg-black text-white text-center py-6">
+          <p>&copy; {new Date().getFullYear()} Pablo Riverio. Todos los derechos reservados.</p>
+        </div>
       </footer>
-
-
 
     </>
   )

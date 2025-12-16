@@ -145,7 +145,15 @@
     {
       "img": "freelance.jpg",
       "title": "Freelance",
-      "text": "Poco después de recibirme como Licenciado en Ciencias de la Comunicación busqué vincularme a todo lo que involucrara una cámara y una historia. Así fue que tuve la posibilidad de ganar el concurso Video Relámpago de Cinemateca uruguaya del año 2004 con un corto hecho entre amigos. Desde entonces siempre estoy trabajando como camarógrafo, editor, productor o guionista, como cuando produje Paseo Amarillo, una propuesta para niños que se emitió por Canal 5 https://www.youtube.com/watch?v=SU1y6e_dSj0"
+      "text": "Poco después de recibirme como Licenciado en Ciencias de la Comunicación busqué vincularme a todo lo que involucrara una cámara y una historia. Así fue que tuve la posibilidad de ganar el concurso Video Relámpago de Cinemateca uruguaya del año 2004 con un corto hecho entre amigos. Desde entonces siempre estoy trabajando como camarógrafo, editor, productor o guionista, como cuando produje Paseo Amarillo, una propuesta para niños que se emitió por Canal 5",
+      "url": "https://www.youtube.com/watch?v=SU1y6e_dSj0"
+    }
+    ,
+    {
+      "img": "lqep-ureta.jpg",
+      "title": "Lo que está pasando ",
+      "text": "Fui camarógrafo, realizador y editor del exitoso ciclo de videos de Yoututbe del comediante Leandro Ureta, una experiencia de hunmor de actualidad a la que estaba acostumbrado ya en televisión pero con el contacto directo del público a través de las redes metiéndonos de lleno en la comunicación digital que más consume el público hoy en día.",
+      "url": "https://www.youtube.com/watch?v=CWpZRwfRnqc&list=PLIHM4V73foTGMAkmLqQpStW86WjIRFtmb&index=99"
     }
   ],
   "creatividad": [
@@ -180,6 +188,26 @@
     {
       "img": "croma.JPG",
       "title": "Productora Creactivos junto a Leandro Ureta"
+    }
+  ],
+  "humor": [
+    {
+      "img": "standup2.jpg"
+    },
+    {
+      "img": "standuppic(1).jpg"
+    },
+    {
+      "img": "standuppic(2).jpg"
+    },
+    {
+      "img": "standuppic(3).jpg"
+    },
+    {
+      "img": "standuppic(4).jpg"
+    },
+    {
+      "img": "standuppic(5).jpg"
     }
   ]
 }
