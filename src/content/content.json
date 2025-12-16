@@ -1,58 +1,123 @@
 {
   "acercademi": [
-    { "img": "_PT52487.jpg" },
-    { "img": "DOS_0139.jpg" },
-    { "img": "DSC_6132.jpg" },
-    { "img": "HOL_0385.jpg" },
-    { "img": "filmaker.jpg" },
-    { "img": "fotografo.jpg" },
-    { "img": "producto.jpg" },
-    { "img": "tvman.jpg" },
-    { "img": "standup.jpg" }
+    {
+      "img": "_PT52487.jpg"
+    },
+    {
+      "img": "DOS_0139.jpg"
+    },
+    {
+      "img": "DSC_6132.jpg"
+    },
+    {
+      "img": "HOL_0385.jpg"
+    },
+    {
+      "img": "filmaker.jpg"
+    },
+    {
+      "img": "fotógrafo.jpg"
+    },
+    {
+      "img": "producto.jpg"
+    },
+    {
+      "img": "tvman.jpg"
+    },
+    {
+      "img": "standup.jpg"
+    }
   ],
   "desarrollo": [
     {
-      "images": ["log-incartofix.png","dashboard-cartofix.png"],
+      "images": [
+        "log-incartofix.png",
+        "dashboard-cartofix.png"
+      ],
       "title": "CarToFix",
-      "description": "Un sistema de gestión para talleres mecánicos que permite llevar el control de clientes, vehículos, órdenes de trabajo y facturación de manera eficiente y sencilla. Formé parte del grupo de producto, diseñamos en Figma para obetener el diseño principal y construirlo en React, también programé el presupustador de la herramienta",
-      "technologies": ["React", "Tailwind CSS", "FastAPI", "Firebase"],
+      "description": "Un sistema de gestión para talleres mecánicos que permite llevar el control de clientes, vehículos, órdenes de trabajo y facturación de manera eficiente y sencilla. Formé parte del grupo de producto, diseñamos en Figma para obtener el diseño principal y construirlo en React, también programé el presupuestador de la herramienta",
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "FastAPI",
+        "Firebase"
+      ],
       "link": "https://github.com/Diego-Bonora/holbertonschool-CarToFix"
     },
     {
-      "images": ["Importación.png","cargas-megaship.png"],
+      "images": [
+        "Importación.png",
+        "cargas-megaship.png"
+      ],
       "title": "MegaShip",
       "description": "Una plataforma integral para la gestión de importaciones y logística, facilitando la manera de presupuestar envíos internacionales para empresas de todos los tamaños. Colaboré en la creación del producto y su experiencia de usuario",
-      "technologies": ["React", "Styled Components", "NodeJS", "Zustand", "Supabase"],
+      "technologies": [
+        "React",
+        "Styled Components",
+        "NodeJS",
+        "Zustand",
+        "Supabase"
+      ],
       "link": "https://megaship.netlify.app/"
     },
     {
-      "images": ["dashboard-faro-latino.JPG","form-faro.jpeg"],
+      "images": [
+        "dashboard-faro-latino.JPG",
+        "form-faro.jpeg"
+      ],
       "title": "Faro Latino",
       "description": "Colaboración en la incorporación de nuevas funcionalidades y mejoras en la experiencia de usuario de la plataforma de administración de suscripciones a plataformas musicales Faro Latino. Colaboré realizando cambios en formularios dinámicos y reportes personalizados desde su estructura en backend utilizando Django hasta su presentación en frontend.",
-      "technologies": ["React", "Django", "PostrgeSQL"],
+      "technologies": [
+        "React",
+        "Django",
+        "PostgreSQL"
+      ],
       "link": "https://github.com/javieryoung/farolatino"
     },
     {
-      "images": ["ceratwit.jpg","ceratwit-mensaje.jpg"],
+      "images": [
+        "ceratwit.jpg",
+        "ceratwit-mensaje.jpg"
+      ],
       "title": "CeraTwit",
-      "description": "Idea para recibir la participación del público en un evento dedicado a los 10 años de la desaparición física de Gustavo Cerati. Propuse un formulario al que se accedía pro código QR donde las personas aportaban mensajes, un sistema de manager para que la producción autorizara los mensajes y una página que reproducía los mensajes para ser proyectada en pantalla gigante, un aporte creativo que contruí en unos pocos días usando react para el front y Firebase para almacenar los mensajes.",
-      "technologies": ["React", "Animate CSS", "Firebase", "Netlify"],
+      "description": "Idea para recibir la participación del público en un evento dedicado a los 10 años de la desaparición física de Gustavo Cerati. Propuse un formulario al que se accedía por código QR donde las personas aportaban mensajes, un sistema de manager para que la producción autorizara los mensajes y una página que reproducía los mensajes para ser proyectada en pantalla gigante, un aporte creativo que construí en unos pocos días usando React para el front y Firebase para almacenar los mensajes.",
+      "technologies": [
+        "React",
+        "Animate CSS",
+        "Firebase",
+        "Netlify"
+      ],
       "link": "https://ceratwit.netlify.app/ceratwits"
-    
     },
     {
-      "images": ["noja1.jpg","noja2.jpg"],
+      "images": [
+        "noja1.jpg",
+        "noja2.jpg"
+      ],
       "title": "Noja",
-      "description": "Proyecto en construcción. Colaboración en Sitio de información financiera que recoge información de Api y genera sugerencias de inversión basadas en análisis técnico. Colaboré en el armado del sistema en Django y PostrgeSQL y en el montaje de la aplicación en AWS.",
-      "technologies": ["React", "Django", "PostrgeSQL", "AWS", "EC2", "SES"],
+      "description": "Proyecto en construcción. Colaboración en sitio de información financiera que recoge información de API y genera sugerencias de inversión basadas en análisis técnico. Colaboré en el armado del sistema en Django y PostgreSQL y en el despliegue de la aplicación en AWS.",
+      "technologies": [
+        "React",
+        "Django",
+        "PostgreSQL",
+        "AWS",
+        "EC2",
+        "SES"
+      ],
       "link": "https://noja.young.uy"
-    
     },
     {
-      "images": ["interpaul.jpg","interpaul-2.jpg"],
-      "title": "Interpaul",
-      "description": "Re imaginación del sitio web de interpol utilizando la API pública de la organización para mostrar información actualizada sobre personas buscadas internacionalmente. Observando que el sitio original tenía un estilo sobrio y poco moderno, propuse a manera de ejercicio un estilo basado en lo que solemos ver más a menudo en películas con fondos cyberneticos, tipografías digitales y sonidos computarizados, proyecto para divertirse y homeenagear las pelícus de espías que veíamos en los 80s.",
-      "technologies": ["React", "ACSS", "Interpol public API"],
+      "images": [
+        "interpaul.jpg",
+        "interpaul-2.jpg"
+      ],
+      "title": "InterPaul",
+      "description": "Re-imaginación del sitio web de Interpol utilizando la API pública de la organización para mostrar información actualizada sobre personas buscadas internacionalmente. Observando que el sitio original tenía un estilo sobrio y poco moderno, propuse a manera de ejercicio un estilo basado en lo que solemos ver más a menudo en películas con fondos cibernéticos, tipografías digitales y sonidos computarizados, proyecto para divertirse y homenajear las películas de espías que veíamos en los 80s.",
+      "technologies": [
+        "React",
+        "CSS",
+        "Interpol public API"
+      ],
       "link": "https://interpaul.netlify.app/"
     }
   ],
@@ -81,6 +146,40 @@
       "img": "freelance.jpg",
       "title": "Freelance",
       "text": "Poco después de recibirme como Licenciado en Ciencias de la Comunicación busqué vincularme a todo lo que involucrara una cámara y una historia. Así fue que tuve la posibilidad de ganar el concurso Video Relámpago de Cinemateca uruguaya del año 2004 con un corto hecho entre amigos. Desde entonces siempre estoy trabajando como camarógrafo, editor, productor o guionista, como cuando produje Paseo Amarillo, una propuesta para niños que se emitió por Canal 5 https://www.youtube.com/watch?v=SU1y6e_dSj0"
+    }
+  ],
+  "creatividad": [
+    {
+      "img": "streaming.jpg",
+      "title": "Asociación de Diabéticos del Uruguay"
+    },
+    {
+      "img": "maxxwell-smart.jpg",
+      "title": "Colaboración en guiones de humor Canal 4"
+    },
+    {
+      "img": "boxeo.jpg",
+      "title": "Conducción de eventos junto a Rulo Duarte"
+    },
+    {
+      "img": "canal10.jpg",
+      "title": "Yo y tres más, producción y realización humorística, Canal 10"
+    },
+    {
+      "img": "holberton.jpg",
+      "title": "Holberton School, fundamentos de programación"
+    },
+    {
+      "img": "paseo-amarillo.jpg",
+      "title": "Paseo Amarillo, creación de programa infantil Canal 5"
+    },
+    {
+      "img": "personaje.jpg",
+      "title": "Sección humorística en Lo que está pasando, streaming de humor de Leandro Ureta"
+    },
+    {
+      "img": "croma.JPG",
+      "title": "Productora Creactivos junto a Leandro Ureta"
     }
   ]
 }
