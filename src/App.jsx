@@ -138,7 +138,7 @@ function App() {
                 transition={{ duration: 0.5 }}
               />
               <motion.a
-                href="assets/Pablo Riveiro DEV CV202.pdf"
+                href="assets/PABLO RIVEIRO resume Dev - fullstack 2026 en.pdf"
                 download
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -193,7 +193,6 @@ function App() {
           {collapsed ? "<" : ">"}
 
       </button>
-
 
           <div className="group relative flex items-center justify-end">
             <motion.div className="w-10 h-10 bg-black ml-2" />
