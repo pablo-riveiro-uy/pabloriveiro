@@ -16,6 +16,29 @@ function App() {
   const creatividad_content = data.creatividad;
   const humor_content = data.humor;
 
+  {/*Estados para menú vertical*/ }
+
+  const [floating, setFloating] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
+
+
+
+  useEffect(() => {
+    const onheader = document.querySelector("#myheader"); // id del header
+    if (!onheader) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // cuando el segundo componente entra en pantalla, activamos el menú flotante
+        setFloating(!entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(onheader);
+    return () => observer.disconnect();
+  }, []);
+
   {/* Slider Acerca de mi */ }
 
   const [index, setIndex] = useState(0);
@@ -59,8 +82,7 @@ function App() {
         w-full min-h-screen
   grid grid-cols-1 md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_2.5fr_1fr] lg:grid-rows-1
   items-center px-4 gap-x-10 gap-y-10
-      ">
-        {/* <header className="w-full min-h-screen grid grid-cols-[1fr_2.5fr_1fr] items-center px-4 gap-x-10"> */}
+      " id='myheader'>
         {/* Sección izquierda: foto y cuadros */}
 
         <div className="flex flex-row items-center justify-center gap-2">
@@ -129,65 +151,96 @@ function App() {
         </div>
 
         {/* Sección derecha: menú vertical */}
-        <nav
-          className="
-      w-full
-      grid grid-cols-2 gap-4 justify-items-end
-      lg:flex lg:flex-col lg:items-end
-      text-warhol-ink text-sm
-  "
+
+
+        {!floating ?   <nav className="w-full grid grid-cols-2 gap-4 justify-items-end lg:flex lg:flex-col lg:items-end text-warhol-ink text-sm">
+        {/* títulos + cuadrados siempre visibles */}
+        <div className="w-full flex flex-row gap-2 items-center justify-end">
+          <motion.a href="#comunicacion" className="hover:text-warhol-electric">Comunicación</motion.a>
+          <motion.div className="w-10 h-10 bg-black ml-4" />
+        </div>
+        <div className="w-full flex flex-row gap-2 items-center justify-end">
+          <motion.a href="#desarrollo" className="hover:text-warhol-electric">Desarrollo Web</motion.a>
+          <motion.div className="w-10 h-10 bg-warhol-cyan ml-4" />
+        </div>
+        <div className="w-full flex flex-row gap-2 items-center justify-end">
+          <motion.a href="#creatividad" className="hover:text-warhol-electric">Creatividad</motion.a>
+          <motion.div className="w-10 h-10 bg-warhol-banana ml-4" />
+        </div>
+        <div className="w-full flex flex-row gap-2 items-center justify-end">
+          <motion.a href="#humor" className="hover:text-warhol-electric">Humor</motion.a>
+          <motion.div className="w-10 h-10 bg-warhol-pink ml-4" />
+        </div>
+      </nav>
+:
+          <div className="fixed right-0 top-1/4 z-50">
+      {collapsed ? (
+        // solo el botón >
+        <button
+          onClick={() => setCollapsed(false)}
+          className="bg-black/60 text-white px-2 py-1 rounded-l"
         >
-          <div className="w-full flex flex-row gap-2 items-center justify-end ">
-            <motion.a href="#comunicacion" className="hover:text-warhol-electric"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.8 }}
-            >Comunicación</motion.a>
-            <motion.div className="w-10 h-10 bg-black ml-4" initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-              }} />
-          </div>
-          <div className="w-full flex flex-row gap-2 items-center justify-end">
-            <motion.a href="#desarrollo" className="hover:text-warhol-electric"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.8 }}
-            >Desarrollo Web</motion.a>
-            <motion.div className="w-10 h-10 bg-warhol-cyan ml-4" initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-              }} />
-          </div>
-          <div className="w-full flex flex-row gap-2 items-center justify-end">
-            <motion.a href="#creatividad" className="hover:text-warhol-electric"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.8 }}
+           {collapsed ? "<" : ">"}
 
-            >Creatividad</motion.a>
-            <motion.div className="w-10 h-10 bg-warhol-banana ml-4" initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-              }} />
-          </div>
-          <div className="w-full flex flex-row gap-2 items-center justify-end">
-            <motion.a href="#humor" className="hover:text-warhol-electric"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.8 }}
+        </button>
+      ) : (
+        // menú flotante completo
+        <nav className="fixed right-0 top-1/4 flex flex-col items-end gap-2 w-fit bg-black/60">
+    <button
+        onClick={() => setCollapsed(true)}
+        className="bg-black/70 text-white px-2 py-1 rounded flex items-center justify-center"
+      >
+          {collapsed ? "<" : ">"}
 
-            >Humor</motion.a>
-            <motion.div className="w-10 h-10 bg-warhol-pink ml-4" initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-              }} />
+      </button>
+
+
+          <div className="group relative flex items-center justify-end">
+            <motion.div className="w-10 h-10 bg-black ml-2" />
+            <motion.a href="#comunicacion"
+              className="absolute right-12 whitespace-nowrap bg-black/70 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-300">
+              Comunicación
+            </motion.a>
+          </div>
+
+          <div className="group relative flex items-center justify-end">
+            <motion.div className="w-10 h-10 bg-warhol-cyan ml-2" />
+            <motion.a href="#desarrollo"
+              className="absolute right-12 whitespace-nowrap bg-black/70 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-300">
+              Desarrollo Web
+            </motion.a>
+          </div>
+
+          <div className="group relative flex items-center justify-end">
+            <motion.div className="w-10 h-10 bg-warhol-banana ml-2" />
+            <motion.a href="#creatividad"
+              className="absolute right-12 whitespace-nowrap bg-black/70 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-300">
+              Creatividad
+            </motion.a>
+          </div>
+
+          <div className="group relative flex items-center justify-end">
+            <motion.div className="w-10 h-10 bg-warhol-pink ml-2" />
+            <motion.a href="#humor"
+              className="absolute right-12 whitespace-nowrap bg-black/70 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-300">
+              Humor
+            </motion.a>
           </div>
         </nav>
+      )}
+    </div>
+
+
+        }
+
+
+
+
+
+
+
+
+
       </header>
 
       <main>
@@ -201,7 +254,7 @@ function App() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0 }}
         >
           <div className="flex flex-row place-items-center w-full">
             <div className="w-6 h-6 bg-warhol-violeta mr-6" />
@@ -269,7 +322,7 @@ function App() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          viewport={{ once: true, amount: 0.3 }}  >
+          viewport={{ once: true, amount: 0 }}  >
           <div className='flex flex-row place-items-center w-full'>
             <div className="w-6 h-6 bg-warhol-cyan mr-6" />
             <h3 className='text-4xl text-white font-bold leading-tight'>Desarrollo Web</h3>
@@ -366,7 +419,7 @@ function App() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0 }}
         >
           <div className='flex flex-row place-items-center w-full'>
             <div className="w-6 h-6 bg-warhol-ink mr-6" />
@@ -382,7 +435,7 @@ function App() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 w-full"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0 }}
             variants={{
               hidden: {},
               visible: {
@@ -430,7 +483,7 @@ function App() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          viewport={{ once: true, amount: 0.3 }}  >
+          viewport={{ once: true, amount: 0 }}  >
           <div className='flex flex-row place-items-center w-full'>
             <div className="w-6 h-6 bg-warhol-banana mr-6" />
 
@@ -490,7 +543,7 @@ function App() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          viewport={{ once: true, amount: 0.3 }}  >
+          viewport={{ once: true, amount: 0 }}  >
           <div className='flex flex-row place-items-center w-full'>
             <div className="w-6 h-6 bg-warhol-pink mr-6" />
             <h3 className='text-4xl text-white font-bold leading-tight'>Humor</h3>
