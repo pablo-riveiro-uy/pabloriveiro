@@ -492,7 +492,7 @@ function App() {
           </div>
           <div className='text-lg mt-6 text-justify text-white'>
 
-            <p>Siempre tengo que abrir la boca, si ya alguien lo hizo, se me ocurre que siempre puede ser distinto, me gusta que cada cosa tenga su personalidad, así que me es inavitable intentar crear, en el acierto o en el error, creo que es un gran hábito, y saber cuando no re invettar la rueda, también es clave, pero si se puede, se debe crear.</p>
+            <p>Siempre tengo que abrir la boca, lo que sea... si ya lo he visto, se me ocurre que siempre puede ser distinto, me gusta que cada cosa tenga su personalidad, así que me es inavitable intentar crear, en el acierto o en el error, creo que es un gran hábito, claro que saber cuando no re inventar la rueda también es clave, pero si se puede, se debe crear.</p>
             <p>Así es que me meto en líos, trabajar en la tele, convertirme en desarrollador, conducir un evento de kinck boxing, crear un programa para niños original llevándolos de paseo en coordianción con el ministerio de educación, convertirme en personaje en un streaming de humor, o simplemenete aportar la idea distinta en el proyecto más común... no es un mérito, mucho no me sale ser normal. </p>
             <div className="overflow-hidden w-full">
               <motion.section className="relative overflow-hidden w-full py-12">
